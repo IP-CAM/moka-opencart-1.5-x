@@ -68,7 +68,7 @@ Class MokaConfig
     {
         $return = '<table class="moka_table table">'
                 . '<thead>'
-                . '<tr><th>Banka</th>';
+                . '<tr><th>Banka</th><th>Durum</th>';
         for ($i = 1; $i <= self::max_installment; $i++) {
             $return .= '<th>' . $i . ' taksit</th>';
         }
