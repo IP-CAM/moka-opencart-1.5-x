@@ -14,6 +14,7 @@ float:left ;
 .moka{
 border: 1px solid #cececf;
 overflow: hidden;
+background-color: white;
 -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
 -ms-border-radius: 4px;
