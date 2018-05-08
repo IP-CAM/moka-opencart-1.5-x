@@ -77,7 +77,11 @@ Class MokaConfig
         $banks = MokaConfig::getAvailablePrograms();
         foreach ($banks as $k => $v) {
             $return .= '<tr>'
-					. '<th><img src="'.HTTPS_CATALOG.'catalog/view/theme/default/image/moka_payment/' . $k . '.svg" width="105px"></th>';
+					. '<th><img src="'.HTTPS_CATALOG.'catalog/view/theme/default/image/moka_payment/' . $k . '.svg" width="105px"></th>'
+					. '<th><select  name="moka_rates[' . $k . '][active]" >'
+						. '<option value="1">Aktif</option>'
+						. '<option value="0" '.((int)$rates[$k]['active'] == 0 ? 'selected="selected"' : '').'>Pasif</option>'
+                    .'</select></th>';
             for ($i = 1; $i <= self::max_installment; $i++) {
 				if(!isset($rates[$k]['installments'][$i]['active']))
 					$rates[$k]['installments'][$i]['active'] = 0;
@@ -104,9 +108,10 @@ Class MokaConfig
         foreach ($banks as $k => $v) {
             if($v['installments'] == false)
                 continue;
-//            $return[$k] = array('active' => $rates[$k]['active']);
+          $return[$k] = array('active' => $rates[$k]['active']);
             for ($i = 1; $i <= self::max_installment; $i++) {
                 $return[$k]['installments'][$i] = array(
+					'active' =>$rates[$k]['installments'][$i]['active'],
                     'total' => number_format((((100 + $rates[$k]['installments'][$i]['value']) * $price) / 100), 2, '.', ''),
                     'monthly' => number_format((((100 + $rates[$k]['installments'][$i]['value']) * $price) / 100) / $i, 2, '.', ''),
                 );
