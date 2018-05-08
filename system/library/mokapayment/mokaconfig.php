@@ -8,9 +8,9 @@ Class MokaConfig
 	public static function getAvailablePrograms()
 	{
         return array(
-            'axess' => array('name' => 'Axess', 'bank' => 'Akbank A.Ş.', 'installments' => false),
+            'axess' => array('name' => 'Axess', 'bank' => 'Akbank A.Ş.', 'installments' => true),
             'world' => array('name' => 'WordCard', 'bank' => 'Yapı Kredi Bankası', 'installments' => true),
-            'bonus' => array('name' => 'BonusCard', 'bank' => 'Garanti Bankası A.Ş.', 'installments' => false),
+            'bonus' => array('name' => 'BonusCard', 'bank' => 'Garanti Bankası A.Ş.', 'installments' => true),
             'cardfinans' => array('name' => 'CardFinans', 'bank' => 'FinansBank A.Ş.', 'installments' => true),
             'maximum' => array('name' => 'Maximum', 'bank' => 'T.C. İş Bankası', 'installments' => true),
 
