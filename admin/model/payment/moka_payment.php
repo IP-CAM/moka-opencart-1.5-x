@@ -36,6 +36,20 @@ class ModelPaymentMokaPayment extends Model {
         }
     }
 
+    
+    
+    public function disableErrorSettings() {
+        $store_id = (int) $this->config->get('config_store_id');
+        $key = 'config_error_display';
+        $group = 'config';
+        $response = $this->db->query("SELECT `setting_id` FROM " . DB_PREFIX . "setting WHERE store_id = '{$store_id}' AND `group` = '{$group}' AND `key` = '{$key}'");
+        if ($response->num_rows > 0) {
+            $id = (int) $response->row['setting_id'];
+            $this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '0' WHERE `setting_id` = '{$id}' ");
+        } else {
+            $this->db->query("INSERT INTO " . DB_PREFIX . "setting SET store_id = '{$store_id}', `group` = '{$group}', `key` = '{$key}', `value` = '0'");
+        }
+     }
     public function versionCheck($opencart, $moka) {
         $serverdomain = $_SERVER['HTTP_HOST'];
         $ch = curl_init();
