@@ -1,10 +1,6 @@
 <?php
 $moka_url = 'catalog/view/javascript/moka_payment/';
-?>	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-
-
-
+?>
 <script src="catalog/view/javascript/moka_payment/card.js"></script>
 
 
