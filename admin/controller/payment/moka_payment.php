@@ -11,6 +11,7 @@ class ControllerPaymentMokaPayment extends Controller {
 
     public function index() {
         $this->language->load('payment/moka_payment');
+        $this->load->model('payment/moka_payment');
         $this->document->setTitle($this->language->get('heading_title'));
         include(DIR_SYSTEM . 'library/mokapayment/mokaconfig.php');
         $this->load->model('setting/setting');
