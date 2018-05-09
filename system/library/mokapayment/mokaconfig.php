@@ -69,7 +69,7 @@ Class MokaConfig {
         $banks = MokaConfig::getAvailablePrograms();
         foreach ($banks as $k => $v) {
             $return .= '<tr>'
-                    . '<th><img src="' . HTTPS_CATALOG . 'catalog/view/theme/default/image/moka_payment/' . $k . '.svg" width="105px"></th>'
+                    . '<th><img src="' . HTTP_CATALOG . 'catalog/view/theme/default/image/moka_payment/' . $k . '.svg" width="105px"></th>'
                     . '<th><select  name="moka_rates[' . $k . '][active]" >'
                     . '<option value="1">Aktif</option>'
                     . '<option value="0" ' . ((int) $rates[$k]['active'] == 0 ? 'selected="selected"' : '') . '>Pasif</option>'
