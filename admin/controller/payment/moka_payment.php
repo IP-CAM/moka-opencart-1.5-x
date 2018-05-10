@@ -207,7 +207,7 @@ class ControllerPaymentMokaPayment extends Controller {
         $this->data['komisyon'] = $result->Data->PaymentDetail->DealerCommissionAmount;
         $this->data['taksit_sayi'] = $result->Data->PaymentDetail->InstallmentNumber;
         $this->data['creditcart'] = $result->Data->PaymentDetail->CardNumberFirstSix . 'XXX' . $result->Data->PaymentDetail->CardNumberLastFour . ' - ' . $result->Data->PaymentDetail->CardHolderFullName;
-        $this->data['rescode'] = $result->Data->ResultCode;
+        $this->data['rescode'] = $result->Data->ResultCode." - ".$result->Data->PaymentTrxDetailList[0]->ResultMessage;
 
         $this->template = 'payment/moka_payment_order.tpl';
 
