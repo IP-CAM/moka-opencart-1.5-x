@@ -11,6 +11,7 @@ Class MokaConfig {
             'bonus' => array('name' => 'BonusCard', 'bank' => 'Garanti Bankası A.Ş.', 'installments' => true),
             'cardfinans' => array('name' => 'CardFinans', 'bank' => 'FinansBank A.Ş.', 'installments' => true),
             'maximum' => array('name' => 'Maximum', 'bank' => 'T.C. İş Bankası', 'installments' => true),
+			'paraf' => array('name' => 'Paraf', 'bank' => 'Halk Bankası', 'installments' => true),
         );
     }
 
@@ -127,6 +128,7 @@ Class MokaConfig {
    .moka-rates-table td.cardfinans{       background-color: #2d5fc2;       color:#fff;   }
    .moka-rates-table td.world{       background-color: #6f6b99;       color:#fff;   } 
    .moka-rates-table td.bonus{       background-color: #479279;       color:#fff;   }
+   .moka-rates-table td.paraf{       background-color: #479279;       color:#fff;   }
    .moka-rates-table td{      padding: 5px 10px;      text-align: center;   } 
    .moka-amount {      font-size: 13px;      font-weight: 700;      line-height: 20px;   }
    .moka-rates-table td span {      display: inline-block;      width: 100%;      text-align: center;   } 
