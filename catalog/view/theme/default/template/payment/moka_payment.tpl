@@ -3,13 +3,10 @@ $moka_url = 'catalog/view/javascript/moka_payment/';
 ?>
 <script src="catalog/view/javascript/moka_payment/card.js"></script>
 
-
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/moka_payment/moka.css">
     <form   method="POST"  name="mokapostform"  id="mokapostform" action="<?php echo $action ?>">
         <div class= "row"> 
             <div class="col-xs-12">
-
-
 
                 <div id="moka-form" class="mokaform" > 
 
@@ -47,7 +44,6 @@ $moka_url = 'catalog/view/javascript/moka_payment/';
                                 </div>
 
                             </div> 
-
                             <div class="tekcekim-container ">
 
                                 <div class="tekcekim">
@@ -83,7 +79,6 @@ $moka_url = 'catalog/view/javascript/moka_payment/';
                                 <div class="taksit-container ">
                                     <?php foreach ($rates as $bank => $rate) { ?>
 
-
                                         <div class="<?php echo $bank; ?>">
                                             <div class="taksit-title "><img src="catalog/view/theme/default/image/moka_payment/<?php echo $bank ?>.svg"></div>
 
@@ -112,11 +107,7 @@ $moka_url = 'catalog/view/javascript/moka_payment/';
 
                                             <?php } ?>
 
-
-
-
                                         </div>	
-
 
                                     <?php } ?>
 
@@ -142,7 +133,6 @@ $moka_url = 'catalog/view/javascript/moka_payment/';
             var taksit = "<?php echo $installments_mode ?>";
 
         </script>
-
 
         <script type="text/javascript">
             new Card({
