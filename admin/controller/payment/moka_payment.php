@@ -1,7 +1,5 @@
 <?php
-
 error_reporting(0);
-
 class ControllerPaymentMokaPayment extends Controller {
 
     private $error = array();
