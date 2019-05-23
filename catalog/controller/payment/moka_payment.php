@@ -1,8 +1,5 @@
 <?php
-
 error_reporting(0);
-
-
 if (!defined('_MOKA_API_URL_'))
     define('_MOKA_API_URL_', 'https://service.moka.com/PaymentDealer/DoDirectPayment');
 if (!defined('_MOKA_3D_URL_'))
